@@ -1,4 +1,4 @@
-package com.hospetal.petowner;
+package com.hospetal.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
