@@ -17,7 +17,8 @@ class HospitalControllerTest {
     void list() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/hospitals"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string("Hello hosPETal User"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.[0].id").value("1"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.[0].name").value("블루동물병원"))
                 .andDo(MockMvcResultHandlers.print());
     }
 }
