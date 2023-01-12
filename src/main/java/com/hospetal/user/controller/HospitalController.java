@@ -1,11 +1,13 @@
 package com.hospetal.user.controller;
 
 
+import com.hospetal.user.dto.response.HospitalDetailDto;
 import com.hospetal.user.dto.response.HospitalListDto;
 import com.hospetal.user.service.HospitalService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,5 +24,10 @@ public class HospitalController {
     @GetMapping
     public List<HospitalListDto> list() {
         return hospitalService.getHospitals();
+    }
+
+    @GetMapping("/{id}")
+    public HospitalDetailDto detail(@PathVariable Long id) {
+        return hospitalService.getHospital(id);
     }
 }
