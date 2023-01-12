@@ -1,0 +1,51 @@
+= hosPETal User Rest API Docs
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+
+[[introduction]]
+== 소개
+
+hosPETal 보호자 용 API 문서
+
+=== Header
+
+|===
+| name | description
+
+| `Authorization`
+| API를 사용하기 위한 인증 키
+|===
+
+=== 공통 Response Body
+
+|===
+| field | description
+
+| `code`
+| 응답 코드
+
+| `message`
+| 예외사항 내용 등 응답 메세지
+
+| `data`
+| 실제 반환될 데이터
+|===
+
+[[hello]]
+== Hospital API
+
+=== Request
+
+Request HTTP Example:
+
+include::{snippets}/hospital-get-all/http-request.adoc[]
+
+=== Response
+
+Response HTTP Example:
+
+include::{snippets}/hospital-get-all/http-response.adoc[]
